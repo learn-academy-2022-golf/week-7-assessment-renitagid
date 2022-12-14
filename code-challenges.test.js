@@ -33,11 +33,10 @@ describe("aboutMe", () => {
 // Expected output: ["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."]
 
 // b) Create the function that makes the test pass.
-// Create a function called aboutMe that takes a parameter of an object.
-// Use static object method Object.keys() to create an array of the keys which will allow us to iterate through each item (since objects cannot be iterated through in Javascript)
-// Iterate through the array, and for each element, return a template literal with the desired sentence, referencing the values via the original object using dot notation
+// Create a function called aboutMe that takes a parameter of an array.
+// Iterate through the array using a map, and for each element, split up the first and last name into an array. Iterate through the names and capitalize the first letter of each word, then join them back together into a string. Return a template literal with the desired sentence, referencing the values via the original object using dot notation.
 const aboutMe = (array) => {
-  return array.map((object) => {
+  return array.map((array) => {
     let capName = object.name
       .split(" ")
       .map((value) => {

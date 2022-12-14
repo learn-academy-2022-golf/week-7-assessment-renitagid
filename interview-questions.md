@@ -17,7 +17,7 @@ Researched answer: To add to my answer, I learned about another method called ad
 Your answer: The RESTful routes are: index, show, new, create, edit, update, destroy. I am still familiarizing myself with these, but from my understanding, Index will always return all instances of the model and will likely not need params. Show needs to know which specific instance to look for to display and will require params (e.g. the id). New displays a form for users to submit data and will likely not require params. Create will update and save the data entered in the form from new, and must take params in order to pass the data to the database. Edit is similar to New and doesn't require params, and Update similar to Create will require them. Destroy does not require them as it just deletes the entire instance.
 
 
-Researched answer:
+Researched answer:  It actually would depend on whether we are discussing strong params, or something more simple as passing an ID through the url. To modify my answer above, show, edit, update and destroy need to know which specific instance to call on. Create needs strong params, but sends it to the database without needing an id.
 
 3. Name three rails generator commands. What is created by each?
 
@@ -26,7 +26,7 @@ Model: generates a schema which describes a table with various columns, which ca
 Migration: generates a migration file which can be used to make changes to the structure of the model. For example, you can add or remove columns, or update the type of data used in each column.
 Controller: generates the controller file which is a place to put the methods fo your app, as well as a routes and views folder.
 
-Researched answer:
+Researched answer: Another rails generator command is resource. This generates almost everything you need to work on the rails app including the model, controller, and routes. You can also generate an rspec install which adds the dependencies which are needed for rspec testing.
 
 4. Consider the Rails routes below. What is the name of the controller method that would be called by each route? What action would each of the controller methods perform?
 
